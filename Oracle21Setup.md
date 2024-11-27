@@ -4,15 +4,15 @@
 4. Sign in and agree to the farking stupid terms and agreement.
 5. Login to the oracle repository using your oracle login.
     ``` 
-    > docker login container-registry.oracle.com
+    docker login container-registry.oracle.com
     ``` 
 6. Get the latest Oracle db image (23 at time of writting)
     ``` 
-    > docker pull container-registry.oracle.com/database/enterprise:latest
+    docker pull container-registry.oracle.com/database/enterprise:latest
     ``` 
 7. Run above image in a container
     ``` 
-    > docker run -d -p 1521:1521 --name {My-Container-Name} -e ORACLE_PWD={SYS-USER-PASSWORD} -e ORACLE_SID={Oracle-SID} --shm-size="8g" container-registry.oracle.com/database/enterprise
+    docker run -d -p 1521:1521 --name {My-Container-Name} -e ORACLE_PWD={SYS-USER-PASSWORD} -e ORACLE_SID={Oracle-SID} --shm-size="8g" container-registry.oracle.com/database/enterprise
     ```
 8. Connect to db using Oracle Sql Developer:
     ```Uesrname: SYS
